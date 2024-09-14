@@ -1,174 +1,482 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>YouTube Replica</title>
+        <title>YouTube Replication</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/video.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
     </head>
 
     <body>
-        <div class="header">
+        <header class="header">
             <div class="left-section">
-                <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="">
-                <img class="youtube-logo" src="icons/youtube-logo.svg" alt="">
+                <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="hamburger-menu">
+                <img class="youtube-logo" src="icons/youtube-logo.svg" alt="youtube-logo">
             </div>
 
             <div class="middle-section">
                 <input class="search-bar" type="text"placeholder="Search">
                 <button class="search-button">
-                    <img class="search-icon" src="icons/search.svg" alt="">
+                    <img class="search-icon" src="icons/search.svg" alt="search-icon">
+                    <div class="tooltip">Search</div>
                 </button>
                 <button class="voice-search-button">
-                    <img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="">
+                    <img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="voice-search-icon">
+                    <div class="tooltip">Search with your voice</div>
                 </button>
             </div>
 
             <div class="right-section">
-                <img class="upload-icon" src="icons/upload.svg" alt="">
-                <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="">
-                <img class="notifications-icon" src="icons/notifications.svg" alt="">
-                <img class="user-icon" src="persons/person0.webp" alt="">
+                <div class="upload-icon-container">
+                    <img class="upload-icon" src="icons/upload.svg" alt="upload-icon">
+                    <div class="tooltip">Create</div>
+                </div>
+                <div class="youtube-apps-icon-container">
+                    <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="youtube-apps-icon">
+                    <div class="tooltip">YouTube apps</div>
+                </div>
+                <div class="notifications-icon-container">
+                    <img class="notifications-icon" src="icons/notifications.svg" alt="notifications-icon">
+                    <div class="notifications-count">3</div>
+                    <div class="tooltip">Notifications</div>
+                </div>
+                <img class="user-icon" src="persons/person0.webp" alt="user-icon">
             </div>
+        </header>
 
-        </div>
+        <nav class="sidebar">
+            <div class="sidebar-link">
+                <img class="home-icon" src="icons/home.svg" alt="home-icon">
+                <div>Home</div>
+            </div>
+            <div class="sidebar-link">
+                <img class="explore-icon" src="icons/explore.svg" alt="explore-icon">
+                <div>Explore</div>
+            </div>
+            <div class="sidebar-link">
+                <img class="subscriptions-icon" src="icons/subscriptions.svg" alt="subscriptions-icon">
+                <div>Subscriptions</div>
+            </div>
+            <div class="sidebar-link">
+                <img class="originals-icon" src="icons/originals.svg" alt="originals-icon">
+                <div>Originals</div>
+            </div>
+            <div class="sidebar-link">
+                <img class="youtube-music-icon" src="icons/youtube-music.svg" alt="youtube-music-icon">
+                <div>YouTube-Music</div>
+            </div>
+            <div class="sidebar-link">
+                <img class="library-icon" src="icons/library.svg" alt="library-icon">
+                <div>Library</div>
+            </div>
+        </nav>
         
-        <div class="video-grid">
-            <div class="video-preview"> 
-                <div class="video-row">
-                    <img class="video" src="/videos/video1.webp" alt="">
-                </div>
-                <div class ="video-info-grid">
-                    <div class="channel-pic">
-                        <img class="person" src="/persons/person1.webp" alt="">
+        <main>
+            <section class="video-grid">
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                        <a href="https://youtu.be/r9bpNLgPYH0?si=Ltiw-udbVZjBh60L">
+                            <img class="video" src="/videos/video1.webp" alt="video1">
+                        </a>
+                        <div class="video-time">
+                            2:21
+                        </div>
                     </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            welcome to the internet - bo burnham animated
-                        </p>
-                        <p class="video-author">
-                            Natorius 
-                        </p>
-                        <p class="video-stats">
-                            2M views &#183; 3 years ago
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="video-preview"> 
-                <div class="video-row">
-                <img class="video" src="/videos/video2.webp" alt="">
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-pic">
-                        <img class="person" src="/persons/person2.webp" alt="">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            HTML & CSS Full Course - Beginner to Pro
-                        </p>
-                        <p class="video-author">
-                            SuperSimpleDev 
-                        </p>
-                        <p class="video-stats">
-                            11M views &#183; 2 years ago
-                        </p>
+                    <div class ="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@nnatorius">
+                                <img class="person" src="/persons/person1.webp" alt="person1">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/r9bpNLgPYH0?si=Ltiw-udbVZjBh60L">
+                                    welcome to the internet - bo burnham animated
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@nnatorius">
+                                    Natorius
+                                </a> 
+                            </p>
+                            <p class="video-stats">
+                                2M views &#183; 3 years ago
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/G3e-cpL7ofc?si=S7pjtKnbaQXm8OzX">
+                        <img class="video" src="/videos/video2.webp" alt="video2">
+                    </a>
+                    <div class="video-time">
+                        <p>6:31:24</p>
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@SuperSimpleDev">
+                                <img class="person" src="/persons/person2.webp" alt="person2">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/G3e-cpL7ofc?si=S7pjtKnbaQXm8OzX">
+                                    HTML & CSS Full Course - Beginner to Pro
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@SuperSimpleDev">
+                                    SuperSimpleDev 
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                11M views &#183; 2 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
 
-            <div class="video-preview"> 
-                <div class="video-row">
-                <img class="video" src="/videos/video4.webp" alt="">
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-pic">
-                        <img class="person" src="/persons/person4.webp" alt="">
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/-I26usMiuS4?si=DEuvLA-gcwswL9P5">
+                        <img class="video" src="/videos/video4.webp" alt="video3">
+                    </a>
+                    <div class="video-time">
+                        9:44
                     </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            Why Moscow Is Insanely Well Designed
-                        </p>
-                        <p class="video-author">
-                            Versed
-                        </p>
-                        <p class="video-stats">
-                            1.5M views &#183; 6 months ago
-                        </p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="video-preview"> 
-                <div class="video-row">
-                <img class="video" src="/videos/video3.webp" alt="">
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-pic">
-                        <img class="person" src="/persons/person3.webp" alt="">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            カラス - うぴ子【MV】CROW - UPIKO
-                        </p>
-                        <p class="video-author">
-                            うぴ子(UPIKO)
-                        </p>
-                        <p class="video-stats">
-                            3.4M views &#183; 8 months ago
-                        </p>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@Versedyoutube">
+                                <img class="person" src="/persons/person4.webp" alt="person3">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/-I26usMiuS4?si=DEuvLA-gcwswL9P5">
+                                    Why Moscow Is Insanely Well Designed
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@Versedyoutube">
+                                    Versed
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                1.5M views &#183; 6 months ago
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/0-40A3xSEx0?si=XcVWrFYQWSLMCzgi">
+                        <img class="video" src="/videos/video3.webp" alt="video4">
+                    </a>
+                    <div class="video-time">
+                        4:17
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@upikoyoutube">
+                                <img class="person" src="/persons/person3.webp" alt="person4">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/0-40A3xSEx0?si=XcVWrFYQWSLMCzgi">
+                                    カラス - うぴ子【MV】CROW - UPIKO
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@upikoyoutube">
+                                    うぴ子(UPIKO)
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                3.4M views &#183; 8 months ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="video-preview"> 
-                <div class="video-row">
-                <img class="video" src="/videos/video5.webp" alt="">
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-pic">
-                        <img class="person" src="/persons/person5.webp" alt="">
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/sI8NsYIyQ2A?si=OzcmA5-WmLjDszL0">
+                        <img class="video" src="/videos/video5.webp" alt="video5">
+                    </a>
+                    <div class="video-time">
+                        4:58
                     </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            Why do cats act so weird? - Tony Buffington
-                        </p>
-                        <p class="video-author">
-                            TED-Ed
-                        </p>
-                        <p class="video-stats">
-                            12M views &#183; 8 years ago
-                        </p>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@TEDEd">
+                                <img class="person" src="/persons/person5.webp" alt="person5">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/sI8NsYIyQ2A?si=OzcmA5-WmLjDszL0">
+                                    Why do cats act so weird? - Tony Buffington
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@TEDEd">
+                                    TED-Ed
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                12M views &#183; 8 years ago
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="video-preview"> 
-                <div class="video-row">
-                <img class="video" src="/videos/video6.webp" alt="">
-                </div>
-                <div class="video-info-grid">
-                    <div class="channel-pic">
-                        <img class="person" src="/persons/person6.webp" alt="">
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/xuCn8ux2gbs?si=yhYd5yl0y5owF6vO">
+                        <img class="video" src="/videos/video6.webp" alt="video6">
+                    </a>
+                    <div class="video-time">
+                        19:26
                     </div>
-                    <div class="video-info">
-                        <p class="video-title">
-                            history of the entire world, i guess
-                        </p>
-                        <p class="video-author">
-                            bill wurtz
-                        </p>
-                        <p class="video-stats">
-                            170M views &#183; 7 years ago
-                        </p>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/channel/UCq6aw03lNILzV96UvEAASfQ">
+                                <img class="person" src="/persons/person6.webp" alt="person6">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/xuCn8ux2gbs?si=yhYd5yl0y5owF6vO">
+                                    history of the entire world, i guess
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/channel/UCq6aw03lNILzV96UvEAASfQ">
+                                    bill wurtz
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                170M views &#183; 7 years ago
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/_fhDVVfELsM?si=w75m791M3SJBZ5Nf">
+                        <img class="video" src="/videos/video8.webp" alt="video7">
+                    </a>
+                    <div class="video-time">
+                        1:05:54
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@BeedleTheBardcore">
+                                <img class="person" src="/persons/person8.webp" alt="person7">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/_fhDVVfELsM?si=guf1ghowgwqZEyRM">
+                                    ONE HOUR OF MEDIEVAL EMINEM | The Real Slim Shady, Lose Yourself, Without Me, Godzilla, Stan + more!
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@BeedleTheBardcore">
+                                    Beedle The Bardcore
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                10M views &#183; 3 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/hL_WP4ugEno?si=3RF5sOAVqiQ8EthR">
+                        <img class="video" src="/videos/video9.webp" alt="video8">
+                    </a>
+                    <div class="video-time">
+                        25:16
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@honoruin">
+                                <img class="person" src="/persons/person9.webp" alt="person8">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/hL_WP4ugEno?si=3RF5sOAVqiQ8EthR">
+                                    Горный Алтай | После которого тебя мало что удивляет! Чуйский тракт от начала до конца
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@honoruin">
+                                    Леша Хон
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                1.3M views &#183; 2 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/s4cqzF6tMBQ?si=jzqZT88F2d37CRwH">
+                        <img class="video" src="/videos/video11.webp" alt="video9">
+                    </a>
+                    <div class="video-time">
+                        2:17
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@netflixanime">
+                                <img class="person" src="/persons/person11.webp" alt="person9">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/s4cqzF6tMBQ?si=jzqZT88F2d37CRwH">
+                                    Arcane: Season 2 | Official Trailer | Netflix
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@netflixanime">
+                                    Netflix Anime
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                625K views &#183; 9 days ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/XKHEtdqhLK8?si=8MymXM9RJOTm2KnL">
+                        <img class="video" src="/videos/video7.webp" alt="video10">
+                    </a>
+                    <div class="video-time">
+                        12:00:00
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@BroCodez">
+                                <img class="person" src="/persons/person7.webp" alt="person10">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/XKHEtdqhLK8?si=8MymXM9RJOTm2KnL">
+                                    Python Full Course for free 🐍
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@BroCodez">
+                                    Bro Code
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                19M views &#183; 3 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/GK-BHZs7GxE?si=hImUGy8h7TOfmihf">
+                        <img class="video" src="/videos/video10.webp" alt="video11">
+                    </a>
+                    <div class="video-time">
+                        8:13
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@BusinessInsider">
+                                <img class="person" src="/persons/person10.webp" alt="person11">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="hhttps://youtu.be/GK-BHZs7GxE?si=hImUGy8h7TOfmihf">
+                                    How Flip-Flop Art Helps Clean Kenya's Beaches | World Wide Waste | Business Insider
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@BusinessInsider">
+                                    Business Insider
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                8.8M views &#183; 2 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-preview"> 
+                    <div class="video-row">
+                    <a href="https://youtu.be/OZ5sQU4GmvE?si=hadJNIc12f2it5HY">
+                        <img class="video" src="/videos/video12.webp" alt="video12">
+                    </a>
+                    <div class="video-time">
+                        0:44
+                    </div>
+                    </div>
+                    <div class="video-info-grid">
+                        <div class="channel-pic">
+                            <a href="https://www.youtube.com/@mkugu">
+                                <img class="person" src="/persons/person12.webp" alt="person12">
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <p class="video-title">
+                                <a href="https://youtu.be/OZ5sQU4GmvE?si=hadJNIc12f2it5HY">
+                                    Senior Developer vs Junior ONE
+                                </a>
+                            </p>
+                            <p class="video-author">
+                                <a href="https://www.youtube.com/@mkugu">
+                                    DIGITAL TECHNOPARK - FASTER COMMUNITY
+                                </a>
+                            </p>
+                            <p class="video-stats">
+                                665K views &#183; 5 years ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
     </body>
 </html>  
 

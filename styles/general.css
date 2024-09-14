@@ -1,9 +1,26 @@
 p{
-    font-family: Roboto, Arial;
     margin-top: 0;
     margin-bottom: 0;
 }
 body{
+    font-family: Roboto, Arial; 
+    color:black;
     margin:0;
+    padding-top: 80px;
+    padding-left: 96px;
+    padding-right: 24px;
+    background-color: rgb(250, 250, 250);
+}
+a{
+    text-decoration: none; 
+    color: inherit; 
+}
+main{
+    margin-bottom: 20px;
+}
 
+@media(min-width: 1200px){
+    body{
+        padding-left: 222px;
+    }
 }
