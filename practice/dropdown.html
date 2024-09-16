@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dropdown</title>
+    </head>
+
+    <body>
+      <div class="dropdown">
+        <button>food</button>
+        <div class="content">
+          <a href="">breakfast</a>
+          <a href="">lunch</a>
+          <a href="">dinner</a>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quidem veritatis expedita obcaecati velit consequatur sint, consequuntur nesciunt sit quos! Vel fugit est suscipit repellat corporis dolorem consequatur recusandae nam?</p>
+    </body>
+
+    <style>
+      .dropdown button{
+        background-color: brown;
+        border: none;
+        cursor: pointer;
+        color:pink;
+        padding: 10px 15px;
+
+      }
+      .dropdown a{
+        display: block;
+        align-items: column;
+        color:pink;
+        text-decoration: none;
+        padding:10px 15px;
+
+      }
+      .dropdown .content{
+        display: none;
+        position:absolute;
+        background-color: rgb(185, 59, 59);
+        min-width: 100px;
+        box-shadow: 2px 2px 2px brown;
+      }
+      .dropdown:hover .content{
+        display: block;
+      }
+
+      .dropdown:hover button{
+        background-color: blanchedalmond;
+      }
+      .dropdown a:hover{
+        background-color: blanchedalmond;
+      }
+      .dropdown{
+        display: inline-block;
+      }
+
+    </style>
+
+</html>

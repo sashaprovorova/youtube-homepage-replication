@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pseudoelements practice</title>
+    </head>
+    <body>
+        <h2>Hello</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, magni necessitatibus, ad atque tempora laboriosam voluptate veritatis fuga dolor incidunt voluptates? Pariatur aperiam veniam quos ratione atque, corrupti quis sequi?</p>
+        <ul id="fruit">
+            <li id="banana">banana</li>
+            <li id="apple">apple</li>
+            <li id="orange">orange</li>
+        </ul>
+    </body>
+
+    <style>
+        h2::first-letter{
+            font-size: 2em;
+            font-style: italic;
+        }
+        p::first-line{
+            background-color: yellow;
+        }
+        p::selection{
+            color:brown;
+            background-color: pink;
+        }
+        
+        #fruit li::before{
+            content: "✔️";
+        }
+        #apple::after{
+            content: "🍎";
+        }
+        #banana::after{
+            content: "🍌";
+        }
+        #orange::after{
+            content: "🍊";
+        }
+
+
+    </style>
+ </html>

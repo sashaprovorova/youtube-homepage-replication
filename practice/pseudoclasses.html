@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pseudoclasses practice</title>
+    </head>
+    <body>
+        <a href="">link</a>
+
+        <ul >
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </body>
+
+    <style>
+        a:link{
+            color:blueviolet;
+        }
+        a:hover{
+            color:aqua;
+            font-size: 1.1em;
+        }
+        a:active{
+            color:red;
+            font-size: 1.1em;
+        }
+        a:visited{
+            color:pink;
+        }
+
+        li:hover{
+            background-color: brown;
+        }
+        li:not(:hover){
+            background-color: pink
+        }
+        li:nth-child(3){
+            background-color: blanchedalmond;
+        }
+        li:nth-child(odd){
+            font-style: italic;
+        }
+        li:nth-child(3n+1){
+            color:blue;
+        }
+
+    </style>
+
+</html>
