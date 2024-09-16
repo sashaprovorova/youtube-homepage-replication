@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Transformations practice</title>
+    </head>
+
+    <body>
+       
+           <div id="box">Hi</div>
+           <div class="cat">
+            <img src="cat5.png" alt="cat">
+           </div>
+       
+    </body>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .cat img{
+            animation-name: grow;
+            animation-duration: 2s;
+            width: 200px;
+            margin-left: 200px;
+        }
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: blanchedalmond;
+            font-size: 13em;
+            text-align: center;
+            /*animation-name: slideLeft;
+            animation-name: slideRight;
+            animation-name: slideUp;
+            animation-name: slideDown;
+            animation-name: rotate;
+            animation-name: grow;
+            animation-name: shrink;
+            animation-name: fade;*/
+
+            /*for fadeIn
+            opacity: 0;
+            animation-name: fadeIn;*/
+
+            /*animation-name: colorChange;
+            animation-duration: 2s;*/
+
+            animation-name: glow;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes slideLeft {
+            from{transform: translateX(100%)}
+        }
+        @keyframes slideRight {
+            to{transform: translateX(100%)}
+        }
+        @keyframes slideUp {
+            /*from down to up*/
+            from{transform: translateY(300%)}
+        }
+
+        @keyframes slideDown {
+            /*from up to down */
+            to{transform: translateY(300%)}
+        }
+
+        @keyframes rotate {
+            /*
+            100%{transform: rotateX(360deg)}
+            100%{transform: rotateY(360deg)}
+            100%{transform: rotateZ(360deg)}*/
+            50%{transform: rotateZ(360deg)}
+            
+        }
+        @keyframes grow {
+            50%{transform: scale(2, 2)}
+        }
+
+        @keyframes shrink {
+            50%{transform: scale(0.5, 0.5)}
+        }
+        @keyframes fade {
+            50%{opacity:0}
+        }
+
+        @keyframes fadeIn {
+            100%{opacity:1}
+        }
+        @keyframes colorChange {
+            0%{background-color: brown}
+            20%{background-color:rgb(159, 89, 89)}
+            40%{background-color:rgb(200, 147, 147)}
+        }
+
+        @keyframes glow {  
+            50%{box-shadow: 0px 0px 50px rgb(246, 246, 89);}
+        }
+        /*
+        #box:hover{
+            animation-name: glow;
+            animation-duration: 2s;
+            cursor: pointer;
+        }*/
+    </style>
+     
+</html>
